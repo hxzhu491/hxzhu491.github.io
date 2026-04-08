@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Research | Hongxu Zhu</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: #222;
+      background: #ffffff;
+      line-height: 1.6;
+    }
+
+    a {
+      color: #2a6db0;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .topbar {
+      border-bottom: 1px solid #e5e5e5;
+      background: #fff;
+    }
+
+    .topbar-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 14px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .site-title {
+      font-size: 22px;
+      font-weight: 700;
+      color: #111;
+    }
+
+    .nav {
+      display: flex;
+      gap: 18px;
+      flex-wrap: wrap;
+      font-size: 15px;
+    }
+
+    .nav a.active {
+      font-weight: 700;
+      color: #111;
+    }
+
+    .container {
+      max-width: 950px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    h1 {
+      font-size: 36px;
+      margin-bottom: 10px;
+    }
+
+    .intro {
+      color: #555;
+      font-size: 18px;
+      margin-bottom: 36px;
+    }
+
+    .project {
+      margin-bottom: 54px;
+      padding-bottom: 26px;
+      border-bottom: 1px solid #ececec;
+    }
+
+    .project h2 {
+      font-size: 28px;
+      margin-bottom: 12px;
+    }
+
+    .project p {
+      font-size: 17px;
+      margin-bottom: 14px;
+    }
+
+    .placeholder {
+      width: 100%;
+      height: 260px;
+      border: 1px dashed #bbb;
+      background: #fafafa;
+      color: #777;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 17px;
+      border-radius: 6px;
+      margin-top: 14px;
+    }
+
+    .footer {
+      max-width: 950px;
+      margin: 30px auto 20px;
+      padding: 20px;
+      color: #777;
+      font-size: 14px;
+      border-top: 1px solid #e5e5e5;
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <div class="site-title"><a href="index.html" style="color: inherit; text-decoration: none;">Hongxu Zhu</a></div>
+      <nav class="nav">
+        <a href="index.html">About</a>
+        <a href="research.html" class="active">Research</a>
+        <a href="#">Publications</a>
+        <a href="#">CV</a>
+        <a href="#">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="container">
+    <h1>Selected Research Projects</h1>
+    <p class="intro">
+      My research lies at the intersection of biostatistics, machine learning, and biomedical data science,
+      with a focus on developing reliable methods for complex and high-dimensional data.
+    </p>
+
+    <section class="project">
+      <h2>1. Causal Inference with Hidden Confounding</h2>
+      <p>
+        This project studies how to estimate causal effects when important confounders are unobserved.
+        Hidden confounding is a major challenge in observational studies because standard regression
+        adjustment may produce biased effect estimates when relevant variables are missing.
+      </p>
+      <p>
+        My work explores methods that leverage additional structure across environments to recover
+        causal information in the presence of latent confounding. This includes frameworks related
+        to invariant estimation and approaches that combine information from multiple sources of variation.
+      </p>
+      <div class="placeholder">Placeholder for figure / method diagram</div>
+    </section>
+
+    <section class="project">
+      <h2>2. Evaluation of Perturbation Prediction Models</h2>
+      <p>
+        This project examines how to properly evaluate predictive models for cellular perturbation
+        experiments. In many studies, common metrics such as correlation or mean squared error may
+        not align well with the actual biological goal of identifying differentially expressed genes.
+      </p>
+      <p>
+        I studied the use of AUPRC as a biologically relevant evaluation metric for perturbation
+        prediction. This work highlights that a model can appear accurate under standard numerical
+        metrics while still failing to recover the most important biological signal.
+      </p>
+    </section>
+
+    <section class="project">
+      <h2>3. Stable Predictive Set</h2>
+      <p>
+        The Stable Predictive Set project focuses on prediction under heterogeneity and distribution shift.
+        When the target environment differs from the training environment, predictors that appear useful
+        in one setting may fail to generalize to another.
+      </p>
+      <p>
+        This project develops a framework for selecting predictors that are more stable across environments,
+        with the goal of improving transportability and robustness in out-of-distribution prediction.
+        The approach is especially motivated by biomedical settings where only partial observations are
+        available in the target context.
+      </p>
+    </section>
+  </div>
+
+  <footer class="footer">
+    © 2026 Hongxu Zhu
+  </footer>
+</body>
+</html>
