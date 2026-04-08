@@ -5,52 +5,263 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Hongxu Zhu</title>
   <style>
+    * {
+      box-sizing: border-box;
+    }
+
     body {
-      font-family: Arial, sans-serif;
-      max-width: 800px;
-      margin: 40px auto;
-      padding: 0 20px;
-      line-height: 1.6;
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
       color: #222;
+      background: #ffffff;
+      line-height: 1.6;
     }
-    h1 {
-      margin-bottom: 0;
-    }
-    .subtitle {
-      color: #666;
-      margin-top: 6px;
-    }
-    h2 {
-      margin-top: 32px;
-    }
+
     a {
-      color: #0366d6;
+      color: #2a6db0;
       text-decoration: none;
     }
+
     a:hover {
       text-decoration: underline;
+    }
+
+    .topbar {
+      border-bottom: 1px solid #e5e5e5;
+      background: #fff;
+    }
+
+    .topbar-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 14px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .site-title {
+      font-size: 22px;
+      font-weight: 700;
+      color: #111;
+    }
+
+    .nav {
+      display: flex;
+      gap: 18px;
+      flex-wrap: wrap;
+      font-size: 15px;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 36px auto;
+      padding: 0 20px;
+      display: grid;
+      grid-template-columns: 280px 1fr;
+      gap: 48px;
+    }
+
+    .sidebar {
+      position: sticky;
+      top: 24px;
+      align-self: start;
+    }
+
+    .profile-img {
+      width: 220px;
+      height: 220px;
+      object-fit: cover;
+      border-radius: 6px;
+      display: block;
+      margin-bottom: 20px;
+      background: #f2f2f2;
+    }
+
+    .name {
+      font-size: 30px;
+      font-weight: 700;
+      margin: 0 0 8px 0;
+      line-height: 1.2;
+    }
+
+    .subtitle {
+      color: #555;
+      margin-bottom: 20px;
+    }
+
+    .follow-title {
+      font-size: 15px;
+      font-weight: 700;
+      margin-top: 20px;
+      margin-bottom: 10px;
+    }
+
+    .info-list,
+    .link-list {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 16px 0;
+    }
+
+    .info-list li,
+    .link-list li {
+      margin-bottom: 8px;
+      color: #444;
+      font-size: 15px;
+    }
+
+    .main h1 {
+      font-size: 34px;
+      margin-top: 0;
+      margin-bottom: 18px;
+    }
+
+    .main h2 {
+      font-size: 26px;
+      margin-top: 36px;
+      margin-bottom: 14px;
+      border-bottom: 1px solid #eee;
+      padding-bottom: 8px;
+    }
+
+    .main p {
+      margin-bottom: 16px;
+      font-size: 17px;
+    }
+
+    .main ul {
+      padding-left: 22px;
+      margin-bottom: 18px;
+    }
+
+    .main li {
+      margin-bottom: 10px;
+      font-size: 17px;
+    }
+
+    .footer {
+      max-width: 1100px;
+      margin: 40px auto 20px;
+      padding: 20px;
+      color: #777;
+      font-size: 14px;
+      border-top: 1px solid #e5e5e5;
+    }
+
+    @media (max-width: 850px) {
+      .container {
+        grid-template-columns: 1fr;
+        gap: 28px;
+      }
+
+      .sidebar {
+        position: static;
+      }
+
+      .profile-img {
+        width: 180px;
+        height: 180px;
+      }
     }
   </style>
 </head>
 <body>
-  <h1>Hongxu Zhu</h1>
-  <p class="subtitle">PhD in Biostatistics | Researcher in statistics, machine learning, and biomedical data science</p>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <div class="site-title">Hongxu Zhu</div>
+      <nav class="nav">
+        <a href="#about">About</a>
+        <a href="#research">Research</a>
+        <a href="#publications">Publications</a>
+        <a href="#cv">CV</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
 
-  <h2>About</h2>
-  <p>
-    I am a researcher interested in biostatistics, machine learning, causal inference,
-    and high-dimensional biomedical data analysis.
-  </p>
+  <div class="container">
+    <aside class="sidebar">
+      <img src="https://via.placeholder.com/220x220.png?text=Photo" alt="Hongxu Zhu" class="profile-img" />
 
-  <h2>Projects</h2>
-  <ul>
-    <li>Project 1</li>
-    <li>Project 2</li>
-    <li>Project 3</li>
-  </ul>
+      <h1 class="name">Hongxu Zhu</h1>
+      <div class="subtitle">
+        PhD in Biostatistics<br />
+        Statistical Machine Learning<br />
+        Biomedical Data Science
+      </div>
 
-  <h2>Contact</h2>
-  <p>Email: your_email_here</p>
-  <p>GitHub: <a href="https://github.com/hxzhu491">hxzhu491</a></p>
+      <div class="follow-title">Info</div>
+      <ul class="info-list">
+        <li>Houston, TX</li>
+        <li>Open to research opportunities</li>
+        <li>Email: your_email_here</li>
+      </ul>
+
+      <div class="follow-title">Links</div>
+      <ul class="link-list">
+        <li><a href="https://github.com/hxzhu491" target="_blank">GitHub</a></li>
+        <li><a href="https://www.linkedin.com/" target="_blank">LinkedIn</a></li>
+        <li><a href="#" target="_blank">Google Scholar</a></li>
+        <li><a href="#" target="_blank">CV (PDF)</a></li>
+      </ul>
+    </aside>
+
+    <main class="main">
+      <section id="about">
+        <h2>About Me</h2>
+        <p>
+          I recently earned my PhD in Biostatistics. My research focuses on
+          statistical machine learning, causal inference, and robust methods
+          for high-dimensional biomedical data, with applications in genomics,
+          single-cell data, and perturbation modeling.
+        </p>
+        <p>
+          I am particularly interested in developing reliable and interpretable
+          methods for complex biological systems, especially when data are
+          high-dimensional, heterogeneous, or affected by distribution shift.
+        </p>
+      </section>
+
+      <section id="research">
+        <h2>Research Interests</h2>
+        <ul>
+          <li>Statistical machine learning</li>
+          <li>Causal inference under hidden confounding</li>
+          <li>High-dimensional biomedical data analysis</li>
+          <li>Single-cell and genomic data science</li>
+          <li>Robust prediction under distribution shift</li>
+        </ul>
+      </section>
+
+      <section id="publications">
+        <h2>Selected Work</h2>
+        <ul>
+          <li>Prediction of perturbation effects on gene expression</li>
+          <li>Biologically relevant evaluation of predictive models</li>
+          <li>Causal inference with hidden confounding and environment shift</li>
+        </ul>
+      </section>
+
+      <section id="cv">
+        <h2>CV</h2>
+        <p>
+          You can add your CV here as a PDF link once we upload it to your repository.
+        </p>
+      </section>
+
+      <section id="contact">
+        <h2>Contact</h2>
+        <p>Email: your_email_here</p>
+        <p>GitHub: <a href="https://github.com/hxzhu491" target="_blank">hxzhu491</a></p>
+      </section>
+    </main>
+  </div>
+
+  <footer class="footer">
+    © 2026 Hongxu Zhu
+  </footer>
 </body>
 </html>
